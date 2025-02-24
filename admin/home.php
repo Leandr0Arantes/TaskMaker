@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/home.css">
 </head>
 
 <body>
@@ -21,17 +22,7 @@
         <button type="submit">Cadastrar</button>
     </form>
 
-    <thead>
-        <tr>
-            <th>Título</th>
-            <th>Descrição</th>
-            <th>Está completo?</th>
-            <th>Criado</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-
-    <tbody>
+    <div class="container">
         <?php
         include("../database/conexao.php");
         $id = $_SESSION["id"];
@@ -47,23 +38,25 @@
             $completed = $row["completed"];
             $create_at = $row["created_at"];
             echo "
-                <tr>
-                    <td>" . $title . "</td>
-                    <td>" . $description . "</td>
-                    <td>" . $completed . "</td>
-                    <td>" . $create_at . "</td>
-                    <td>
-                        <form action='../database/deletar_task.php' method='post'>
-                        <input type='hidden' name='id' value='$task_id'>
-                        <button type='submit'><i style='color:red'class='fa-solid fa-trash-can'></i></button>
-                        </form>
-                    </td>
-                </tr>
+                <div class='container-task'>
+        <p>" . $title . "</p>
+        <p>" . $description . "</p>
+        <p>" . $completed . "</p>
+        <p>" . $create_at . "</p>
+        <form action='../database/editar_task.php' method='post'>
+            <input type='hidden' name='id' value='$task_id'>
+            <button type='submit'><i class='fa-solid fa-pen'></i></button>
+        </form>
+        <form action='../database/deletar_task.php' method='post'>
+            <input type='hidden' name='id' value='$task_id'>
+            <button type='submit'><i class='fa-solid fa-trash-can'></i></button>
+        </form>
+    </div>
         
             ";
         }
         ?>
-    </tbody>
+    </div>
 </body>
 
 <?php
