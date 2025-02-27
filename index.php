@@ -35,16 +35,29 @@
     </section>
     <section id="funcionalidades" class="funcionalidades">
         <div class="container active">
-            Oque é?
+            <div class="conteudo">
+                <h2>Nosso site é focado no gerenciamento otimizado de tarefas</h2>
+                <p>Com o TaskMaker, você pode organizar suas tarefas de forma eficiente e prática, aumentando sua produtividade e garantindo que você nunca perca um prazo importante.</p>
+            </div>
+            <div class="imagem">
+                
+            </div>
         </div>
         <div class="container">
-            Fazer login ou cadastrar-se
+            <div class="conteudo">
+
+            </div>
+            <div class="imagem"></div>
         </div>
         <div class="container">
             Como funciona?
+            <div class="conteudo"></div>
+            <div class="imagem"></div>
         </div>
         <div class="container">
             Outras utilidades
+            <div class="conteudo"></div>
+            <div class="imagem"></div>
         </div>
         <div class="botoes">
             <button id="btn-prev"><i class="fa-solid fa-angle-left"></i></button>
@@ -73,17 +86,6 @@
     <footer>
         <p>Direitos reservados. Leandro Henrique Arantes</p>
     </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
     <script>
         const containers = document.querySelectorAll('.funcionalidades .container');
         const circles = document.querySelectorAll('.botoes span i');
@@ -117,6 +119,15 @@
             containers[indexAtual].classList.add('active');
             circles[indexAtual].classList.replace('fa-regular', 'fa-solid');
         })
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 
