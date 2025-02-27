@@ -92,7 +92,6 @@
         document.getElementById('btn-next').addEventListener('click', function(){
             containers[indexAtual].classList.remove('active');
             circles[indexAtual].classList.replace('fa-solid', 'fa-regular');
-            console.log(circles[indexAtual]);
 
             indexAtual++;
 
