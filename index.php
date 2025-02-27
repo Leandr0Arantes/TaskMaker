@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="shortcut icon" href="assets/images/taskmaker_icon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>TaskMaker</title>
 </head>
+
 <body>
     <header>
         <div class="logo-taskmaker">
-            <a href="index.php">Taskmaker</a>
+            <a href="index.php"><img src="assets/images/tasmaker_azul.png" alt=""></a>
         </div>
         <nav>
             <ul>
                 <li><a href="#">Welcome</a></li>
-                <li><a href="#">Teste</a></li>
-                <li><a href="#">Teste</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#como_funciona">Como Funciona?</a></li>
+                <li><a href="#sobre_nos">Sobre nós</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
         <div class="btn-header">
-            <a href="pages/login.php">Log in</a>
-            <a class="sign-in" href="pages/cadastro.php">Sign in</a>
+            <a href="pages/login.php">Logar</a>
+            <a class="sign-in" href="pages/cadastro.php">Registre-se</a>
         </div>
     </header>
     <section class="welcome">
@@ -29,10 +33,92 @@
             <input type="text">
         </form>
     </section>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga laborum nesciunt dolore beatae voluptatum minus tenetur nemo, sequi, culpa id natus ad iure officia illo? Iste sed quam mollitia dicta!</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga laborum nesciunt dolore beatae voluptatum minus tenetur nemo, sequi, culpa id natus ad iure officia illo? Iste sed quam mollitia dicta!</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga laborum nesciunt dolore beatae voluptatum minus tenetur nemo, sequi, culpa id natus ad iure officia illo? Iste sed quam mollitia dicta!</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga laborum nesciunt dolore beatae voluptatum minus tenetur nemo, sequi, culpa id natus ad iure officia illo? Iste sed quam mollitia dicta!</p>
+    <section id="funcionalidades" class="funcionalidades">
+        <div class="container active">
+            Oque é?
+        </div>
+        <div class="container">
+            Fazer login ou cadastrar-se
+        </div>
+        <div class="container">
+            Como funciona?
+        </div>
+        <div class="container">
+            Outras utilidades
+        </div>
+        <div class="botoes">
+            <button id="btn-prev"><i class="fa-solid fa-angle-left"></i></button>
+            <span><i class="fa-solid fa-circle"></i></span>
+            <span><i class="fa-regular fa-circle"></i></span>
+            <span><i class="fa-regular fa-circle"></i></span>
+            <span><i class="fa-regular fa-circle"></i></span>
+            <button id="btn-next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </section>
+    <section id="sobre_nos" class="sobre_nos"></section>
+    <section id="contato" class="contato">
+        <form action="" method="post">
+            <p>Entre em contato conosco!</p>
+            <div class="form-group">
+                <span><i class="fa-light fa-circle-user"></i></span>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div class="form-group">
+                <span><i class="fa-regular fa-envelope"></i></span>
+                <input type="email" name="email" id="email">
+            </div>
+
+        </form>
+    </section>
+    <footer>
+        <p>Direitos reservados. Leandro Henrique Arantes</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        const containers = document.querySelectorAll('.funcionalidades .container');
+        const circles = document.querySelectorAll('.botoes span i');
+        let indexAtual = 0;
+
+        document.getElementById('btn-next').addEventListener('click', function(){
+            containers[indexAtual].classList.remove('active');
+            circles[indexAtual].classList.replace('fa-solid', 'fa-regular');
+            console.log(circles[indexAtual]);
+
+            indexAtual++;
+
+            if(indexAtual >= containers.length){
+                indexAtual = 0
+            }
+
+            containers[indexAtual].classList.add('active');
+            circles[indexAtual].classList.replace('fa-regular', 'fa-solid');
+
+        })
+
+        document.getElementById('btn-prev').addEventListener('click', function(){
+            containers[indexAtual].classList.remove('active');
+            circles[indexAtual].classList.replace('fa-solid', 'fa-regular');
+            
+            if(indexAtual <= 0){
+                indexAtual = containers.length;
+            }
+
+            indexAtual--;
+
+            containers[indexAtual].classList.add('active');
+            circles[indexAtual].classList.replace('fa-regular', 'fa-solid');
+        })
+    </script>
 </body>
 
 <?php
