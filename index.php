@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="logo-taskmaker">
-            <a href="index.php"><img src="assets/images/tasmaker_azul.png" alt=""></a>
+            <a href="index.php"><img id="imagem-logo" src="assets/images/taskmaker_logo_blue.png" alt=""></a>
         </div>
         <nav>
             <ul>
@@ -29,10 +29,19 @@
         </div>
     </header>
     <section class="welcome">
-        <form action="" method="post">
-            <input type="text">
-        </form>
+        <div class="conteudo">
+            <h1>Capture, organize e enfrente suas tarefas em qualquer lugar.</h1>
+            <p>Escape da desordem e aumente sua produtividade com Taskmaker.</p>
+            <form action="#">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <button type="submit">Registre-se - É gratís!</button>
+            </form>
+        </div>
+        <div class="imagem">
+            <img src="assets/images/img_welcome.png" alt="">
+        </div>
     </section>
+      <!-- 
     <section id="funcionalidades" class="funcionalidades">
         <div class="container active">
             <div class="conteudo">
@@ -149,13 +158,14 @@
 
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 1) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
     </script>
+    -->
 </body>
 
 <?php

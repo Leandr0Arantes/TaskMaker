@@ -9,6 +9,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* VARIAVEIS DAS CORES DO SITE */
+:root {
+    --backgroud-header: white;
+    --font-header: black;
+}
+
+.dark-theme {
+    --backgroud-header: rgb(17, 17, 17);
+    --font-header: white;
+}
+/* VARIAVEIS DAS CORES DO SITE */
+
 /* HEADER */
 
 header {
@@ -17,7 +29,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
+    background-color: var(--backgroud-header);
     transition: 1s;
 }
 
@@ -52,13 +64,13 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--font-header);
     font-size: 20px;
 }
 
 header a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--font-header);
     font-size: 20px;
 }
 
@@ -84,7 +96,84 @@ header .btn-header .sign-in:hover{
 .welcome {
     width: 100%;
     height: 100vh;
-    background-color: rgb(255, 213, 213);
+    background-color: rgb(239, 249, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome .conteudo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+}   
+
+.welcome .conteudo h1 {
+    width: 100%;
+    color: #063472;
+    text-align: justify;
+    font-size: 40px;
+
+}
+
+.welcome .conteudo p {
+    width: 100%;
+    margin: 0 0 0.5em 0;
+    color: #063472;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.welcome .conteudo form {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.welcome .conteudo form input {
+    color: #063472;
+    text-align: justify;
+    border: 1px solid rgb(221, 231, 238);
+    width: 40%;
+    height: 3em;
+    border-radius: 5px;
+    padding: 0px 1em;
+}
+
+.welcome .conteudo form button {
+    color: white;
+    text-align: justify;
+    background-color: #4276e7;
+    width: 40%;
+    height: 3em;
+    border: none;
+    border-radius: 5px;
+    margin-left: 3%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.welcome .conteudo form button:hover {
+    background-color: #063472;
+}
+
+
+.welcome .imagem {
+    width: 40%;
+}
+
+.welcome .imagem img{
+    width: 80%;
+    height: 90%;
+    margin-left: 8em;
 }
 
 /* WELCOME */

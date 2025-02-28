@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+</head>
+
+<body>
+    <input type="number" id="input">
+    <button id="btn">Enviar</button>
+    <p id="tela"></p>
+
+    <script>
+
+        const tela = document.getElementById('tela');
+
+        document.getElementById('btn').addEventListener('click', function () {
+            let valor = parseInt(document.getElementById('input').value);
+            tela.textContent = "Temporizador: " + valor;
+
+            const intervalo = setInterval(function () {
+                valor--;
+
+                console.log("Temporizador: " + valor);
+                tela.textContent = "Temporizador: " + valor;
+
+                if (valor < 0) {
+                    clearInterval(intervalo);
+                    tela.textContent = "Tempo acabado!";
+                    console.log("Tempo acabado!");
+
+
+                    let contador = 5;
+                    const mudarcor = setInterval(function () {
+                        tela.style.color = (tela.style.color === 'red') ? 'black' : 'red';
+                        contador--;
+                        if (contador < 0) {
+                            clearInterval(mudarcor);
+                            tela.style.color = 'black';
+                        }
+                    }, 500);
+                }
+            }, 1000);
+
+        })
+
+    </script>
+</body>
+
+</html>
