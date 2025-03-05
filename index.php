@@ -27,7 +27,7 @@
             <a class="sign-in" href="pages/cadastro.php">Registre-se</a>
         </div>
     </header>
-    <button class="btn-tema" id="btn-tema"><i class="fa-solid fa-sun"></i></button>
+    <button class="btn-tema" id="btn-tema"><i class="fa-solid fa-moon"></i></button>
     <section class="home">
         <div class="conteudo">
             <h1>Capture, organize e enfrente suas tarefas em qualquer lugar.</h1>

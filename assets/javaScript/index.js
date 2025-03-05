@@ -44,14 +44,14 @@ document.getElementById('btn-tema').addEventListener('click', function() {
     const body = document.querySelector('body');
     const imgLogo = document.getElementById('imagem-logo');
     const imgHome = document.getElementById('imagem-home');
-    if (icon.classList.contains('fa-sun')) {
-        icon.classList.replace('fa-sun', 'fa-moon');
+    if (icon.classList.contains('fa-moon')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
         body.classList.add('dark-theme');
         imgLogo.src = 'assets/images/taskmaker_logo_white.png';
         imgHome.src = 'assets/images/img_home_dark.png';
         localStorage.setItem('theme', 'dark');
     } else {
-        icon.classList.replace('fa-moon', 'fa-sun');
+        icon.classList.replace('fa-sun', 'fa-moon');     
         body.classList.remove('dark-theme');
         imgLogo.src = 'assets/images/taskmaker_logo_blue.png';
         imgHome.src = 'assets/images/img_home.png';
@@ -67,12 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
         body.classList.add('dark-theme');
-        icon.classList.replace('fa-sun', 'fa-moon');
+        icon.classList.replace('fa-moon', 'fa-sun');
         imgLogo.src = 'assets/images/taskmaker_logo_white.png';
         imgHome.src = 'assets/images/img_home_dark.png';
     } else {
         body.classList.remove('dark-theme');
-        icon.classList.replace('fa-moon', 'fa-sun');
+        icon.classList.replace('fa-sun', 'fa-moon');
         imgLogo.src = 'assets/images/taskmaker_logo_blue.png';
         imgHome.src = 'assets/images/img_home.png';
     }
