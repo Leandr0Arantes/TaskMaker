@@ -1,4 +1,4 @@
-const containers = document.querySelectorAll('.funcionalidades .container');
+const containers = document.querySelectorAll('.tutorial .container');
 const circles = document.querySelectorAll('.botoes span i');
 let indexAtual = 0;
 

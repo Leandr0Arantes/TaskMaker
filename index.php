@@ -41,7 +41,7 @@
             <img id="imagem-home" src="assets/images/img_home.png" alt="">
         </div>
     </section>
-    <section id="funcionalidades" class="funcionalidades">
+    <section id="tutorial" class="tutorial">
         <div class="container active">
             <div class="conteudo">
                 <h2>TaskMaker - Criador e Gerenciador de Tarefas</h2>
@@ -103,8 +103,6 @@
             <button id="btn-next"><i class="fa-solid fa-angle-right"></i></button>
         </div>
     </section>
-
-    <section id="sobre_nos" class="sobre_nos"></section>
     <section id="contato" class="contato">
         <form action="" method="post">
             <p>Entre em contato conosco!</p>
