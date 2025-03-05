@@ -17,9 +17,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#funcionalidades">Como Funciona?</a></li>
-                <li><a href="#sobre_nos">Sobre nós</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#funcionalidades">Tutorial</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -28,7 +27,8 @@
             <a class="sign-in" href="pages/cadastro.php">Registre-se</a>
         </div>
     </header>
-    <section class="welcome">
+    <button class="btn-tema" id="btn-tema"><i class="fa-solid fa-sun"></i></button>
+    <section class="home">
         <div class="conteudo">
             <h1>Capture, organize e enfrente suas tarefas em qualquer lugar.</h1>
             <p>Escape da desordem e aumente sua produtividade com Taskmaker.</p>
@@ -38,10 +38,9 @@
             </form>
         </div>
         <div class="imagem">
-            <img src="assets/images/img_welcome.png" alt="">
+            <img id="imagem-home" src="assets/images/img_home.png" alt="">
         </div>
     </section>
-      <!-- 
     <section id="funcionalidades" class="funcionalidades">
         <div class="container active">
             <div class="conteudo">
@@ -104,6 +103,7 @@
             <button id="btn-next"><i class="fa-solid fa-angle-right"></i></button>
         </div>
     </section>
+
     <section id="sobre_nos" class="sobre_nos"></section>
     <section id="contato" class="contato">
         <form action="" method="post">
@@ -122,50 +122,8 @@
     <footer>
         <p>Direitos reservados. Leandro Henrique Arantes</p>
     </footer>
-    <script>
-        const containers = document.querySelectorAll('.funcionalidades .container');
-        const circles = document.querySelectorAll('.botoes span i');
-        let indexAtual = 0;
 
-        document.getElementById('btn-next').addEventListener('click', function() {
-            containers[indexAtual].classList.remove('active');
-            circles[indexAtual].classList.replace('fa-solid', 'fa-regular');
-
-            indexAtual++;
-
-            if (indexAtual >= containers.length) {
-                indexAtual = 0
-            }
-
-            containers[indexAtual].classList.add('active');
-            circles[indexAtual].classList.replace('fa-regular', 'fa-solid');
-
-        })
-
-        document.getElementById('btn-prev').addEventListener('click', function() {
-            containers[indexAtual].classList.remove('active');
-            circles[indexAtual].classList.replace('fa-solid', 'fa-regular');
-
-            if (indexAtual <= 0) {
-                indexAtual = containers.length;
-            }
-
-            indexAtual--;
-
-            containers[indexAtual].classList.add('active');
-            circles[indexAtual].classList.replace('fa-regular', 'fa-solid');
-        })
-
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 1) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
-    -->
+    <script src="assets/javaScript/index.js"></script>
 </body>
 
 <?php

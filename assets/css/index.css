@@ -9,15 +9,54 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body .btn-tema {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--btn-tema);
+    color: white;
+}
+
+body .btn-tema i {
+    font-size: 25px;
+}
+
+body .btn-tema:hover {
+    background-color: var(--btn-tema-hover);
+}
+
 /* VARIAVEIS DAS CORES DO SITE */
 :root {
-    --backgroud-header: white;
+    --background-header: white;
+    --background-home: rgb(239, 249, 255);
     --font-header: black;
+    --btn-tema: #063472;
+    --btn-tema-hover:#4276e7;
+    --btn-signin:#063472;
+    --btn-signin-hover:#4276e7;
+    --input-signin: white;
+    --input-signin-border: rgb(221, 231, 238);
+    --font-home: #063472;
 }
 
 .dark-theme {
-    --backgroud-header: rgb(17, 17, 17);
+    --background-header: rgb(17, 17, 17);
+    --background-home: rgb(41, 41, 41);
     --font-header: white;
+    --btn-tema: black;
+    --btn-tema-hover:#8a8a8a;
+    --btn-signin:#7097ea;
+    --btn-signin-hover:#4276e7;
+    --input-signin: rgb(61, 61, 61);
+    --input-signin-border: rgb(43, 43, 43);
+    --font-home: white;
 }
 /* VARIAVEIS DAS CORES DO SITE */
 
@@ -29,16 +68,16 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--backgroud-header);
+    background-color: var(--background-header);
     transition: 1s;
 }
 
 header.scrolled {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.336);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.225);
 }
 
 header:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.336);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.225);
 }
 
 
@@ -80,29 +119,30 @@ header .btn-header a {
 }
 
 header .btn-header .sign-in {
-    background-color: #063472;
+    background-color: var(--btn-signin);
     padding: 0.8em 2em;
     color: white;
-    transition: 1s;   
+    transition: 0.5s;   
 }
 
 header .btn-header .sign-in:hover{
-    background-color: #072244;
+    background-color: var(--btn-signin-hover);
 }
 
 /* HEADER */
 
-/* WELCOME */
-.welcome {
+/* HOME */
+.home {
     width: 100%;
     height: 100vh;
-    background-color: rgb(239, 249, 255);
+    background-color: var(--background-home);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 1s;
 }
 
-.welcome .conteudo {
+.home .conteudo {
     width: 40%;
     display: flex;
     justify-content: center;
@@ -111,23 +151,22 @@ header .btn-header .sign-in:hover{
     padding: 2em;
 }   
 
-.welcome .conteudo h1 {
+.home .conteudo h1 {
     width: 100%;
-    color: #063472;
-    text-align: justify;
+    color: var(--font-home);
+    text-align: left;
     font-size: 40px;
-
 }
 
-.welcome .conteudo p {
+.home .conteudo p {
     width: 100%;
     margin: 0 0 0.5em 0;
-    color: #063472;
-    text-align: justify;
+    color: var(--font-home);
+    text-align: left;
     font-size: 20px;
 }
 
-.welcome .conteudo form {
+.home .conteudo form {
     width: 100%;
     height: 100px;
     display: flex;
@@ -135,20 +174,21 @@ header .btn-header .sign-in:hover{
     align-items: center;
 }
 
-.welcome .conteudo form input {
+.home .conteudo form input {
     color: #063472;
     text-align: justify;
-    border: 1px solid rgb(221, 231, 238);
+    border: 1px solid var(--input-signin-border);
+    background-color: var(--input-signin);
     width: 40%;
     height: 3em;
     border-radius: 5px;
     padding: 0px 1em;
 }
 
-.welcome .conteudo form button {
+.home .conteudo form button {
     color: white;
     text-align: justify;
-    background-color: #4276e7;
+    background-color: var(--btn-signin);
     width: 40%;
     height: 3em;
     border: none;
@@ -161,22 +201,22 @@ header .btn-header .sign-in:hover{
     transition: 0.5s;
 }
 
-.welcome .conteudo form button:hover {
-    background-color: #063472;
+.home .conteudo form button:hover {
+    background-color: var(--btn-signin-hover);
 }
 
 
-.welcome .imagem {
+.home .imagem {
     width: 40%;
 }
 
-.welcome .imagem img{
+.home .imagem img{
     width: 80%;
     height: 90%;
     margin-left: 8em;
 }
 
-/* WELCOME */
+/* HOME */
 
 /* CONTATO */
 .contato {
