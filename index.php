@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#funcionalidades">Tutorial</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
