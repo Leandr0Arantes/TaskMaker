@@ -44,7 +44,6 @@
     <section id="tutorial" class="tutorial">
         <div class="container active">
             <div class="conteudo">
-                <h2>TaskMaker - Criador e Gerenciador de Tarefas</h2>
                 <h2>Nosso site é focado no gerenciamento otimizado de tarefas</h2>
                 <p>Com o TaskMaker, você pode organizar suas tarefas de forma eficiente e prática, aumentando sua produtividade e garantindo que você nunca perca um prazo importante.</p>
                 <p>O TaskMaker é uma plataforma para criação e gerenciamento de tarefas, semelhante ao Trello. Ele permite que usuários organizem seus afazeres de forma intuitiva, arrastando e soltando tarefas entre diferentes categorias.</p>
@@ -57,9 +56,6 @@
             <div class="conteudo">
                 <h2>Acesso e Login</h2>
                 <p>Para acessar a parte de gerenciamento de tarefas, o usuário precisa criar uma conta e fazer login. Isso garante que cada usuário tenha seu próprio espaço personalizado para organizar tarefas e projetos.</p>
-            </div>
-            <div class="imagem">
-                <img src="assets/images/taskmaker_login.webp" alt="Imagem ilustrativa do login do site">
             </div>
         </div>
         <div class="container">
@@ -104,18 +100,36 @@
         </div>
     </section>
     <section id="contato" class="contato">
-        <form action="" method="post">
-            <p>Entre em contato conosco!</p>
-            <div class="form-group">
-                <span><i class="fa-light fa-circle-user"></i></span>
-                <input type="text" name="nome" id="nome">
+        <div class="title">
+            <h2>Fale Conosco!</h2>
+        </div>
+        <div class="container">
+            <div class="form">
+                <p>Meios de contato</p>
+                <div class="meios_contato">
+                    <i class="fa-brands fa-whatsapp"><a href="#"></a></i>
+                    <i class="fa-solid fa-envelope"><a href="#"></a></i>
+                </div>
+                <form action="" method="post">
+                    <p>Entre em contato conosco!</p>
+                    <div class="form-group">
+                        <span><i class="fa-solid fa-user"></i></i></span>
+                        <input type="text" name="nome" id="nome" placeholder="Nome completo">
+                    </div>
+                    <div class="form-group">
+                        <span><i class="fa-regular fa-envelope"></i></span>
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <span><i class="fa-solid fa-message"></i></span>
+                        <input type="text" name="mensagem" id="mensagem" placeholder="Digite sua mensagem"> 
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <span><i class="fa-regular fa-envelope"></i></span>
-                <input type="email" name="email" id="email">
+            <div class="imagem">
+                <img src="assets/images/taskmaker_contato.png" alt="">
             </div>
-
-        </form>
+        </div>
     </section>
     <footer>
         <p>Direitos reservados. Leandro Henrique Arantes</p>
@@ -125,7 +139,6 @@
 </body>
 
 <?php
-session_start();
 
 // Verifique se há uma mensagem de erro na sessão
 if (isset($_SESSION['resposta'])) {
