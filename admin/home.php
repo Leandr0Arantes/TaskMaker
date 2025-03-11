@@ -16,11 +16,21 @@
 
     <form action="../database/cadastrar_task.php" method="post">
         <label for="title">Título</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" id="edita_title">
         <label for="descripton">Descrição</label>
-        <input type="text" name="description" id="description">
+        <input type="text" name="description" id="description" id="edita_description">
         <button type="submit">Cadastrar</button>
     </form>
+
+    <div class="editar-task">
+        <form action="../database/editar_task.php" method="post">
+            <label for="title">Título</label>
+            <input type="text" name="title" id="title">
+            <label for="descripton">Descrição</label>
+            <input type="text" name="description" id="description">
+            <button type="submit">Editar</button>
+        </form>
+    </div>
 
     <div class="container">
         <?php
@@ -43,10 +53,7 @@
         <p>" . $description . "</p>
         <p>" . $completed . "</p>
         <p>" . $create_at . "</p>
-        <form action='../database/editar_task.php' method='post'>
-            <input type='hidden' name='id' value='$task_id'>
-            <button type='submit'><i class='fa-solid fa-pen'></i></button>
-        </form>
+            <button type='submit' id='btn-edita'><i class='fa-solid fa-pen'></i></button>
         <form action='../database/deletar_task.php' method='post'>
             <input type='hidden' name='id' value='$task_id'>
             <button type='submit'><i class='fa-solid fa-trash-can'></i></button>
@@ -58,6 +65,24 @@
         ?>
     </div>
 </body>
+
+<script>
+    const inputTitleTask = document.getElementById("title");
+    const inputDescriptionTask = document.getElementById("description");
+    const inputEditaTitleTask = document.getElementById("edita_title");
+    const inputEditaDescriptionTask = document.getElementById("edita_description");
+
+    document.getElementById('btn-edita').addEventListener('click', function() {
+        var textTitle = inputTitleTask.value;
+        var textDescription = inputDescriptionTask.value;
+
+        console.log(textTitle);
+        console.log(textDescription);
+
+        inputEditaTitleTask.value = value(textTitle);
+        inputEditaDescriptionTask.value = value(textDescription);
+    });
+</script>
 
 <?php
 
