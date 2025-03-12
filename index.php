@@ -105,11 +105,6 @@
         </div>
         <div class="container">
             <div class="form">
-                <p>Meios de contato</p>
-                <div class="meios_contato">
-                    <i class="fa-brands fa-whatsapp"><a href="#"></a></i>
-                    <i class="fa-solid fa-envelope"><a href="#"></a></i>
-                </div>
                 <form action="" method="post">
                     <p>Entre em contato conosco!</p>
                     <div class="form-group">
@@ -124,6 +119,7 @@
                         <span><i class="fa-solid fa-message"></i></span>
                         <input type="text" name="mensagem" id="mensagem" placeholder="Digite sua mensagem"> 
                     </div>
+                    <button type="submit">Enviar mensagem!</button>
                 </form>
             </div>
             <div class="imagem">

@@ -324,12 +324,30 @@ header .btn-header .sign-in:hover{
 }
 
 .contato .container .form {
-    background-color: #4276e7;
     width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
 }
 
-.contato .container .form input {
+.contato .container .form form {
+    width: 90%;
+    background-color: #6d4a4a;
+}
+
+.contato .container .form .form-group {
+    background-color: red;
+    padding: 10px 0px;
+
+}
+
+.contato .container .form .form-group span i{
+    background-color: rgb(134, 35, 35);
+}
+
+.contato .container .form .form-group input {
     color: #063472;
     text-align: justify;
     border: 1px solid var(--input-signin-border);
@@ -340,7 +358,25 @@ header .btn-header .sign-in:hover{
     padding: 0px 1em;
 }
 
+.contato .container .form form button {
+    color: white;
+    text-align: justify;
+    background-color: var(--btn-signin);
+    width: 40%;
+    height: 3em;
+    border: none;
+    border-radius: 5px;
+    margin-left: 3%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+}
 
+.contato .container .form form button:hover {
+    background-color: var(--btn-signin-hover);
+}
 
 .contato .container .imagem {
     background-color: azure;
