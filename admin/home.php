@@ -22,16 +22,6 @@
         <button type="submit">Cadastrar</button>
     </form>
 
-    <div class="editar-task">
-        <form action="../database/editar_task.php" method="post">
-            <label for="title">Título</label>
-            <input type="text" name="title" id="title">
-            <label for="descripton">Descrição</label>
-            <input type="text" name="description" id="description">
-            <button type="submit">Editar</button>
-        </form>
-    </div>
-
     <div class="container">
         <?php
         include("../database/conexao.php");
@@ -53,7 +43,10 @@
         <p>" . $description . "</p>
         <p>" . $completed . "</p>
         <p>" . $create_at . "</p>
+        <form action='../database/editar_task.php' method='post'>
+            <input type='hidden' name='id' value='$task_id'>
             <button type='submit' id='btn-edita'><i class='fa-solid fa-pen'></i></button>
+        </form>
         <form action='../database/deletar_task.php' method='post'>
             <input type='hidden' name='id' value='$task_id'>
             <button type='submit'><i class='fa-solid fa-trash-can'></i></button>
