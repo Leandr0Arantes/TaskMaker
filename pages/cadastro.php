@@ -1,3 +1,11 @@
+<?php
+if (isset($_POST["email"])) {
+    $email = $_POST["email"];
+} else {
+    $email = "";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,7 +23,7 @@
             <form action="../database/cadastrar_usuario.php" method="post">
                 <h1>Cadastro de usuário</h1>
                 <label for="user">Usuário</label>
-                <input type="text" name="user" id="user" required>
+                <input type="text" name="user" id="user" required <?php echo "value=".$email ?>>
                 <label for="password">Senha</label>
                 <input type="password" name="password" id="password" required>
                 <label for="password">Confirme a senha</label>
