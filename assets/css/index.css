@@ -49,7 +49,7 @@ body .btn-tema:hover {
     --font-home: #063472;
 
     /* TUTORIAL */
-    --background-tutorial: #063472;
+    --background-tutorial: #4276e7;
 
     /* CONTATO */
     --background-contato: rgb(239, 249, 255);
@@ -252,9 +252,18 @@ header .btn-header .sign-in:hover{
 }
 
 .tutorial h2 {
-    font-size: 1em;
-    color: #063472;
-    margin-bottom: 20px;
+    width: 100%;
+    color: var(--font-home);
+    text-align: left;
+    font-size: 40px;
+}
+
+.tutorial p {
+    width: 100%;
+    margin: 0 0 0.5em 0;
+    color: var(--font-home);
+    text-align: left;
+    font-size: 20px;
 }
 
 .tutorial .container{
