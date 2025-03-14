@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <div class="interface-header">
+        <div class="interface">
             <!-- Imagem da logo -->
             <div class="logo-taskmaker">
                 <a href="index.php"><img id="imagem-logo" src="assets/images/taskmaker_logo_blue.png" alt=""></a>
@@ -49,12 +49,13 @@
                     <a class="sign-in" href="pages/cadastro.php">Registre-se</a>
                 </div>
             </div>
+        </div>
     </header>
 
     <button class="btn-tema" id="btn-tema"><i class="fa-solid fa-moon"></i></button>
-    <!--
+
     <section class="home">
-        <div class="interface-home">
+        <div class="interface">
             <div class="conteudo">
                 <h1>Capture, organize e enfrente suas tarefas em qualquer lugar.</h1>
                 <p>Escape da desordem e aumente sua produtividade com Taskmaker.</p>
@@ -68,7 +69,7 @@
             </div>
         </div>
     </section>
-    
+    <!--
     <section id="tutorial" class="tutorial">
         <div class="container active">
             <div class="conteudo">

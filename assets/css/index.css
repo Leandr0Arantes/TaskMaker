@@ -83,18 +83,12 @@ body .btn-tema:hover {
 
 /* DIV INTERFACE */
 
-.interface-header {
-    width:100em;
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.interface-home {
-    width: 100em;
-    height: 100%;
-    display: flex;
     align-items: center;
 }
 
@@ -102,12 +96,18 @@ body .btn-tema:hover {
 
 /* HEADER */
 
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
 header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: var(--background-header);
     transition: 1s;
 }
@@ -186,17 +186,6 @@ header .submenu-header.active {
 
 header .btn-submenu-header {
     display: none;
-}
-
-@media(max-width: 768px) {
-    header  .menu-header {
-        display: none;
-        background-color: red;
-    }
-
-    header .btn-submenu-header {
-        display: block;
-    }
 }
 
 
