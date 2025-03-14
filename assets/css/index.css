@@ -81,6 +81,25 @@ body .btn-tema:hover {
 }
 /* VARIAVEIS DAS CORES DO SITE */
 
+/* DIV INTERFACE */
+
+.interface-header {
+    width:95em;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interface-home {
+    width: 95em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* DIV INTERFACE */
+
 /* HEADER */
 
 header {
@@ -111,6 +130,12 @@ header .logo-taskmaker a {
     width: 140px;
     height: 50px;
     background-color: rgba(240, 248, 255, 0);
+}
+
+header .menu-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header ul {
@@ -149,6 +174,31 @@ header .btn-header .sign-in {
 header .btn-header .sign-in:hover{
     background-color: var(--btn-signin-hover);
 }
+
+header .submenu-header {
+    display: none;
+}
+
+header .submenu-header.active {
+    display: block;
+}
+
+header .btn-submenu-header {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    header  .menu-header {
+        display: none;
+        background-color: red;
+    }
+
+    header .btn-submenu-header {
+        display: block;
+    }
+}
+
+
 
 /* HEADER */
 
@@ -235,6 +285,12 @@ header .btn-header .sign-in:hover{
     width: 80%;
     height: 90%;
     margin-left: 8em;
+}
+
+@media(max-width: 768px) {
+    .interface-home {
+        flex-direction: column;
+    }
 }
 
 /* HOME */

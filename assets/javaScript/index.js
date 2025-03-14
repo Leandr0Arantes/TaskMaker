@@ -30,14 +30,7 @@ document.getElementById('btn-prev').addEventListener('click', function() {
     circles[indexAtual].classList.replace('fa-regular', 'fa-solid');
 });
 
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 1) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+
 
 document.getElementById('btn-tema').addEventListener('click', function() {
     const icon = document.querySelector('.btn-tema i');
@@ -77,3 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
         imgHome.src = 'assets/images/img_home.png';
     }
 });
+
+const btnSubmenu = document.getElementById('btn-submenu-header');
+
+
+btnSubmenu.addEventListener('click', function() {
+    
+})
