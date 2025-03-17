@@ -251,6 +251,9 @@ header .btn-submenu-header {
 
 .welcome .imagem {
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome .imagem img {
@@ -259,11 +262,20 @@ header .btn-submenu-header {
 }
 
 @media(max-width: 768px) {
-    .interface-home {
-        flex-direction: column;
+    .welcome .interface {
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+        margin-top: 10em;
     }
 
+    .welcome .imagem {
+        width: 60%;
+    }
 
+    .welcome .conteudo {
+        width: 60%;
+        padding: 0em 2em;
+    }
 }
 
 /* WELCOME */
