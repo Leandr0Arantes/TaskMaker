@@ -255,6 +255,7 @@ header .btn-header .sign-in:hover {
 
     .welcome .interface {
         flex-direction: column;
+        margin-top: 5em;
     }
 
     .welcome .conteudo {
@@ -304,8 +305,8 @@ header .btn-header .sign-in:hover {
     }
 
     .welcome .imagem img {
-        width: 90%;
-        height: 100%;
+        width: 250px;
+        height: 250px;
     }
 }
 
