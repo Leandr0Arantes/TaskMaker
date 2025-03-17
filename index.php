@@ -14,10 +14,10 @@
     <header>
         <div class="interface">
             <div class="logo-taskmaker">
-                <a href="index.php"><img id="imagem-logo" src="assets/images/taskmaker_logo_blue.png" alt=""></a>
+                <img id="imagem-logo" src="assets/images/taskmaker_logo_blue.png" alt="">
             </div>
             <div class="btn-header">
-                <a href="pages/login.php">Logar</a>
+                <a class="login" href="pages/login.php">Logar</a>
                 <a class="sign-in" href="pages/cadastro.php">Registre-se</a>
             </div>
         </div>
