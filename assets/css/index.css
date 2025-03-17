@@ -233,7 +233,7 @@ header .btn-header .sign-in:hover {
 
 /* ACESSIBILIDADE PARA CELULAR */
 
-@media (min-width: 360px) and (max-width: 720px) {
+@media (min-width: 0px) and (max-width: 720px) {
 
 
     header .logo-taskmaker {
