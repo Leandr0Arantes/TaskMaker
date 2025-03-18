@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="shortcut icon" href="assets/images/taskmaker_icon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>TaskMaker</title>
+    <title>TaskMaker | welcome </title>
 </head>
 
 <body>
@@ -17,8 +17,8 @@
                 <img id="imagem-logo" src="assets/images/taskmaker_logo_blue.png" alt="">
             </div>
             <div class="btn-header">
-                <a class="login" href="pages/login.php">Logar</a>
-                <a class="sign-in" href="pages/cadastro.php">Registre-se</a>
+                <a class="login" href="pages/signin.php">Logar</a>
+                <a class="sign-in" href="pages/signup.php">Registre-se</a>
             </div>
         </div>
     </header>

@@ -14,34 +14,34 @@ CREATE TABLE usuarios (
     email VARCHAR(100) NOT NULL UNIQUE, -- Email (unique to avoid duplicates)
     senha VARCHAR(255) NOT NULL,       -- Password (hashed for security)
     grupo_id INT,                      -- Foreign key to a 'grupos' table (optional)
-    tarefa_id INT,                     -- Foreign key to a 'tarefas' table (optional)
     status TINYINT(1) DEFAULT 1,       -- User status: 1 for active, 0 for inactive
-    FOREIGN KEY (grupo_id) REFERENCES grupos(id), -- Optional: Link to a 'grupos' table
-    FOREIGN KEY (tarefa_id) REFERENCES tarefas(id) -- Optional: Link to a 'tarefas' table
+    FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE SET NULL -- Link to 'grupos' table
 );
 
 CREATE TABLE grupos (
     id INT AUTO_INCREMENT PRIMARY KEY, -- Unique identifier for each group
     nome VARCHAR(100) NOT NULL,        -- Name of the group
     usuario_id INT NOT NULL,           -- Foreign key referencing 'usuarios' table
-    tarefa_id INT NOT NULL,            -- Foreign key referencing 'tarefas' table
     status TINYINT(1) DEFAULT 1,       -- Group status: 1 for active, 0 for inactive
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id), -- Link to 'usuarios' table
-    FOREIGN KEY (tarefa_id) REFERENCES tarefas(id)   -- Link to 'tarefas' table
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE -- Link to 'usuarios' table
 );
 
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
+CREATE TABLE tarefas (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Unique identifier for each task
+    titulo VARCHAR(100) NOT NULL,      -- Title of the task
+    descricao TEXT,                    -- Description of the task
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Creation date of the task
+    data_conclusao TIMESTAMP,          -- Completion date of the task (optional)
+    status TINYINT(1) DEFAULT 0,       -- Task status: 0 for pending, 1 for completed
+    usuario_id INT NOT NULL,           -- Foreign key referencing 'usuarios' table
+    grupo_id INT,                      -- Foreign key referencing 'grupos' table (optional)
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE, -- Link to 'usuarios' table
+    FOREIGN KEY (grupo_id) REFERENCES grupos(id) ON DELETE SET NULL -- Link to 'grupos' table
 );
 
-CREATE TABLE tasks (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    title VARCHAR(255) NOT NULL,
-    description TEXT NOT NULL,
-    completed BOOLEAN DEFAULT FALSE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
+Quais são as funcionalidades do Sistema
+
+- O usuário pode se cadastrar, fazer login e trocar senha.
+- O usuário vai poder mudar as informações de seu perfil.
+- Vai existir grupos de modo que os usuários trabalhem junto em um grupo de tarefas, onde será possivel criar, editar, deletar um grupo.
+- Vai existir a mecanica de tarefas onde o usuário vai poder criar, editar, deletar uma tarefa.

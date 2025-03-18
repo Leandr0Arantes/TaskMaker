@@ -254,7 +254,7 @@ header .btn-header .sign-in:hover {
     }
 
     .welcome .interface {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 5em;
     }
 
